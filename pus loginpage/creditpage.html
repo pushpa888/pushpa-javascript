@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+    .main{
+        background-color: rgb(23, 145, 145);
+        text-align: center;
+        margin-top: 300px;
+        margin-left: 400px;
+        margin-right: 400px;
+        border-radius: 70px;
+        padding: 50px;
+    
+    }
+    body{
+        background-color: rgb(48, 154, 196);
+    }
+    
+</style>
+<body>
+
+    <div class="btn">
+        <a href="login1.html"><button style="background-color: rgb(40, 102, 184);">home</button></a>
+    </div>
+    <div class=" main">
+        <h1>credit your amount</h1><br>
+        <input type="number"placeholder="enter your amount" id="amount">  <button onclick="credit()">submit</button>
+      
+        <h2 id ="finalcredit"></h2>
+    </div>
+    <script>
+
+         fixamt=10000;
+         function credit(){
+            let cre=document.getElementById('amount').value;
+            let creval =parseInt(cre);
+            let totalbal=fixamt+creval;
+            document.getElementById('finalcredit').innerHTML='your totalbalance ='+totalbal;
+         }
+        
+
+    </script>
+    
+    
+    
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<style>
+    .main{
+        
+        background-color: rgb(20, 156, 219);
+        text-align: center;
+        margin-top: 300px;
+        margin-left: 400px;
+        margin-right: 400px;
+        border-radius: 70px;
+        padding: 50px;
+    
+    }
+    body{
+        background-color:rgb(31, 105, 189);
+        padding: 10px;
+        
+    }
+    
+
+
+
+
+</style>
+<body>
+    <div class="btn">
+        <a href="login1.html"><button  style="background-color: rgb(74, 95, 126);">home</button></a>
+    </div>
+    <div class=" main">
+        <h1>debit your amount</h1><br>
+        <input type="number"placeholder="enter your amount" id="amount"> <button onclick="debit()">submit</button>
+       
+        <h2 id ="finaldebit"></h2>
+    </div>
+    <script>
+
+         fixamt=10000;
+         function debit(){
+            let deb=document.getElementById('amount').value;
+            let debval =parseInt(deb);
+            let totalbal=fixamt-debval;
+            document.getElementById('finaldebit').innerHTML='your totalbalance ='+totalbal;
+         }
+        
+
+    </script>
+    
+</body>
+</html>

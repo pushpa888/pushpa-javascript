@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<style>
+     body{
+        background-color: rgb(65, 123, 190);
+        
+    }
+
+    .pus{
+        background-color:rgb(201, 84, 164);
+        border-radius: 70px;
+        text-align: center;
+        margin-top: 200PX;
+        justify-content: center;
+         align-items: center;
+         height: 450PX;
+         padding: 20PX;
+         color: azure;
+       
+        margin-left: 300px;
+        margin-right: 300px;
+      
+    }
+    
+     .main{
+        text-align: center;
+     }
+
+     
+   
+
+</style>
+<body>
+
+    <div class="btn">
+       <a href="login1.html" ><button style="background-color: aqua;">home</button></a>
+
+    </div>
+    <div class="main" id="account" style="display: none;">
+        <div class="alert mt-3">
+
+      <a href="debitpage.html" > <button onclick="det()"  style="background-color: rgb(38, 175, 199);">debit</button></a>
+
+
+        <div class="main" id="debit"style="display: none;">
+            <div class="alert mt-3">
+               
+            <input type="number" placeholder="enter your pin" id="dpin">
+             <button onclick="okdebit()">ok</button>
+           
+             </div>
+             </div>
+           
+             <button onclick="cre()"  style="background-color: rgb(31, 211, 211);">credit</button>
+
+            <div class="main" id="credit"style="display: none;">
+                <div class="alert mt-3" >
+                    <input type="number" placeholder="enter your pin" id="cpin">
+
+            <a  href="creditpage.html"><button onclick="okcredit()">ok</button></a>
+
+            </div>
+        </div>
+        </div>
+        </div>
+    
+
+    
+    
+   
+
+     <div class= "pus">
+    <h1>account number:123456789</h1>
+        <h1>account holder name:B.pushpa</h1>
+        <h1>Email:kiran.pushpa2001@gmail.com</h1>
+        <h1>  data of birth:18/09/2003</h1>
+        <h1>phone number:9966101200</h1>
+       <h1>Branch code:8888</h1>
+       <h1>IFSC:SBI7989936185</h1>
+       <button onclick="account()"  style="background-color: blueviolet;"> continue transation</button>
+    </div>
+
+
+    <script>
+        function account(){
+            document.getElementById("account").style.display="block";
+        
+        }
+    
+        function debit(){
+            document.getElementById("debit").style.display="block";
+        
+
+        }
+        function credit(){
+            document.getElementById("credit").style.display="block";
+        
+        }
+
+        function okdebit (){
+            let pin=document.getElementById("dpin").value;
+            if(pin==1234){
+                alert("correct pin");
+                location.href="debitpage.html";
+
+            }
+            else{
+                alert("invalid pin");
+            }
+        }
+
+
+        
+        function okcredit(){
+            let pin=document.getElementById("cpin").value;
+            if(pin==1234){
+                alert("correct pin");
+                location.href="creditpage.html";
+
+            }
+            else{
+                alert("invalid pin");
+            }
+        }
+    </script>
+    
+</body>
+</html>

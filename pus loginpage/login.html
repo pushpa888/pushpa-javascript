@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<style>
+
+.push{
+    text-align: center;
+   border-radius: 50px;
+   background: rgb(2,0,36);
+   border: 50%;
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(38,101,171,0.4542191876750701) 35%, rgba(167,48,190,1) 100%);
+   height: 300px;
+   width: 50%;
+   margin-top: 250px;
+   margin-left: 300px;
+   padding-top: 50px;
+
+}
+body{
+
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(38,101,171,0.4542191876750701) 35%, rgba(48,166,190,1) 100%);
+
+}
+
+
+.log input{
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+  
+}
+
+.log button{
+    background-color: cyan;
+    border-radius: 20px;
+}
+   
+
+
+
+
+   
+</style>
+<body>
+    <div  class="container  push" >
+<div  class="log">
+    <h1>user login</h1>
+    
+    <input type="text" placeholder="enter your acount number" id="ac-num"><br><br>
+    <input type="text" placeholder="enter your password" id ="password"><br><br>
+
+    <button onclick="result()">login</button>
+</div>
+    </div>
+    
+    <script>
+
+         function result(){
+
+             let actnum=document.getElementById('ac-num').value;
+              //alert(actnum);
+             let password=document.getElementById('password').value;
+             // alert(password);
+
+
+
+             if(actnum ==1234 && password==9966){
+                alert("log in succeful");
+               location.href="login1.html";
+
+               
+              }
+
+              else if (actnum!=1234 && password!=9966){
+                alert("please enter valid detils");
+         }
+
+         else{
+            alert("please enter valid username");
+         }
+
+
+
+        }
+    </script>
+
+
+    
+</body>
+</html>
